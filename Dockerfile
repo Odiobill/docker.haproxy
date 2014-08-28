@@ -1,6 +1,6 @@
 # haproxy 1.5 debian-based container
-# VERSION               0.1
-FROM debian
+# VERSION               0.2
+FROM debian:wheezy
 MAINTAINER Davide Lucchesi  "davide@lucchesi.nl"
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 95A42FE8353525F9
@@ -18,5 +18,5 @@ VOLUME /etc/haproxy
 EXPOSE 80
 EXPOSE 443
 
-CMD haproxy -f /etc/haproxy/haproxy.cfg -d -p /var/run/haproxy.pid
+CMD ["/usr/bin/haproxy", "-f", "/etc/haproxy/haproxy.cfg", "-d", "-p", "/var/run/haproxy.pid"]
 
