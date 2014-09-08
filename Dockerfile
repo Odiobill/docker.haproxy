@@ -18,5 +18,5 @@ VOLUME /etc/haproxy
 EXPOSE 80
 EXPOSE 443
 
-CMD ["/usr/bin/haproxy", "-f", "/etc/haproxy/haproxy.cfg", "-d", "-p", "/var/run/haproxy.pid"]
+CMD ["/usr/sbin/haproxy", "-f", "/etc/haproxy/haproxy.cfg", "-d", "-p", "/var/run/haproxy.pid"]
 
