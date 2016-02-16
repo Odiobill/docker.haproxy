@@ -9,7 +9,3 @@ You can execute it with something like:
 
     docker run -d -P --name haproxy odiobill/haproxy
 
-To configure your services, you may want to run another (temporary) container that imports its volumes. Run it with:
-
-    docker run -i -t --name config.haproxy --volumes-from haproxy odiobill/haproxy bash
-
